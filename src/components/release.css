@@ -1,0 +1,40 @@
+.release {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%;
+}
+  .release__image {}
+  .release__image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .release__text {
+    padding-left: 1vw;
+  }
+  .release__tracks {}
+  .release__tracks a {
+    color: var(--green);
+    text-decoration: none;
+  }
+  .release__spotify-link {
+    a {
+      text-decoration: none;
+      padding: 1vh;
+      border-radius: 2px;
+      background: #333;
+      color: lightgreen;
+      transition: background 1s ease-out;
+
+      &:hover {
+        background: #000;
+      }
+    }
+  }
+
+.track-list {}
+  .track-list__track {}
+
+.track {}
+  .track__lyrics {
+    color: var(--lightgray);
+  }

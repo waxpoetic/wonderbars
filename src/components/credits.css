@@ -1,0 +1,13 @@
+.credits {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: var(--teal);
+    transition: all 1s ease-out;
+
+    &:hover {
+      color: var(--purple);
+    }
+  }
+}

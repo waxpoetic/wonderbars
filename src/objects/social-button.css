@@ -1,0 +1,48 @@
+.social-button {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1vh;
+  text-decoration: none;
+  transition: all 1s ease-out;
+
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.social-button--blue {
+  background: var(--darkblue);
+  color: var(--offwhite);
+
+  &:hover {
+    background: var(--darkerblue);
+  }
+}
+
+.social-button--teal {
+  background: var(--teal);
+  color: var(--offwhite);
+
+  &:hover {
+    background: var(--darkteal);
+  }
+
+}
+
+.social-button--green {
+  background: var(--gray);
+  color: var(--green);
+
+  &:hover {
+    background: var(--darkgray);
+  }
+}
+
+.social-button--purple {
+  background: var(--purple);
+  color: var(--offwhite);
+
+  &:hover {
+    background: var(--darkpurple);
+  }
+}

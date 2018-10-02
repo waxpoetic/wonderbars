@@ -1,0 +1,64 @@
+.navigation {
+  width: 100%;
+  background: black;
+  color: white;
+  z-index: 99;
+  line-height: 5vh;
+  left: 0;
+  top: 0;
+  animation-name: slideOutUp;
+  position: absolute;
+  grid-template-columns: 95% 5%;
+  grid-template-rows: 100%;
+  font-size: 1.5em;
+}
+
+.navigation__close-button {
+  color: gray;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-right: 1vw;
+
+   &:hover {
+      color: white;
+    }
+}
+
+.navigation--open {
+  display: grid;
+  animation-name: slideInDown;
+}
+
+.navigation--closed {
+  animation-name: slideOutUp;
+
+  .navigation__close-button {
+    display: none;
+  }
+}
+
+  .navigation__link {
+    color: gray;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+    .navigation__link--active {
+      color: #444;
+    }
+
+.navigation__hamburger-button {
+  font-size: 3em;
+
+  a {
+    color: white;
+    background: black;
+    padding: 1vh;
+  }
+}

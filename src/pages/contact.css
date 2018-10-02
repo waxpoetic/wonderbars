@@ -1,0 +1,27 @@
+.contact-page {}
+  .contact-page__video-player {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-427vh) translateY(-30%) scale(5);
+    background-size: cover;
+    background-color: black;
+  }
+
+.role {
+  font-style: normal;
+}
+  .role__title {}
+  .role__name {
+    color: gray
+  }
+  .role__email {
+    a {
+      color: white
+    }
+  }

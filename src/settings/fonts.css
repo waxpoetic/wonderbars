@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Jaapokki Regular';
+  src: url('fonts/jaapokki-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Jaapokki Subtract';
+  src: url('fonts/jaapokki-subtract.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Jaapokki Enchance';
+  src: url('fonts/jaapokki-enchance.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Delhi';
+  src: url('fonts/delhi.woff') format('woff');
+}

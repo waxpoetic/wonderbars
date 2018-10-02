@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="345px" height="611px" viewBox="0 0 345 611" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-5.000000, 0.000000)">
+            <rect id="Rectangle-1" fill="#E00000" transform="translate(306.392228, 500.530008) rotate(-16.000000) translate(-306.392228, -500.530008) " x="304.142228" y="387.23118" width="4.5" height="226.597656"></rect>
+            <rect id="Rectangle-1" fill="#E00000" transform="translate(316.392228, 498.530008) rotate(-16.000000) translate(-316.392228, -498.530008) " x="314.142228" y="385.23118" width="4.5" height="226.597656"></rect>
+            <text id="wonder" transform="translate(186.063708, 320.536797) rotate(-15.000000) translate(-186.063708, -320.536797) " font-family="Delhi" font-size="72" font-weight="normal" fill="#E00000">
+                <tspan x="20.8237085" y="300.536797">wonder</tspan>
+                <tspan x="30.0037085" y="401.536797">          BARS</tspan>
+            </text>
+            <rect id="Rectangle-1" fill="#E00000" transform="translate(172.813708, 112.530008) rotate(-16.000000) translate(-172.813708, -112.530008) " x="170.563708" y="-0.768820403" width="4.5" height="226.597656"></rect>
+            <rect id="Rectangle-1" fill="#E00000" transform="translate(182.813708, 109.530008) rotate(-16.000000) translate(-182.813708, -109.530008) " x="180.563708" y="-3.7688204" width="4.5" height="226.597656"></rect>
+            <text id="the" transform="translate(117.695064, 224.363097) rotate(-15.000000) translate(-117.695064, -224.363097) " font-family="Delhi" font-size="36" font-weight="normal" fill="#000000">
+                <tspan x="92.2610639" y="240.363097">the</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
