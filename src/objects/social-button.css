@@ -46,3 +46,15 @@
     background: var(--darkpurple);
   }
 }
+
+.social-button--yellow {
+  background: var(--yellow);
+  color: var(--black);
+
+  &:hover {
+    background: var(--darkgray);
+    color: var(--offwhite);
+  }
+}
+
+

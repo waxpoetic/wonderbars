@@ -1,4 +1,8 @@
 .contact-page {}
+.contact-page .page__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
   .contact-page__video-player {
     position: fixed;
     top: 50%;
@@ -16,12 +20,17 @@
 .role {
   font-style: normal;
 }
-  .role__title {}
+  .role__title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+  }
   .role__name {
-    color: gray
+    display: none;
+    color: gray;
   }
   .role__email {
     a {
-      color: white
+      color: white;
     }
   }

@@ -1,17 +1,17 @@
 import './release.css'
 
 import React, { Component } from 'react'
-import { map, isEmpty } from 'lodash'
+import { isEmpty } from 'lodash'
 import PropTypes from 'prop-types'
-import marked from 'marked'
 import SpotifyIcon from 'react-icons/lib/fa/spotify'
+// import GeniusIcon from 'react-icons/lib/fa/genius'
 import SocialButton from '../objects/social-button'
 
 class Description extends Component {
   render() {
-    let text = { __html: marked(this.props.children) }
+    const { children } = this.props
 
-    return <p className="release__description" dangerouslySetInnerHTML={text} />
+    return <p className="release__description">{children}</p>
   }
 }
 
@@ -21,13 +21,13 @@ class Track extends Component {
   get lyrics() {
     let { showLyrics } = this.state
     let { lyrics } = this.props
-    let renderedLyrics;
-    if (lyrics) renderedLyrics = { __html: marked(lyrics) }
 
     if (showLyrics && !isEmpty(lyrics)) {
-      return <p dangerouslySetInnerHTML={renderedLyrics} />
+      return <p>{lyrics}</p>
     } else if (showLyrics) {
       return <p><em>Lyrics not available.</em></p>
+    } else {
+      return <></>
     }
   }
 
@@ -56,7 +56,7 @@ class Track extends Component {
 
 class TrackList extends Component {
   get tracks() {
-    return map(this.props.tracks, params => <Track {...params} key={params.id} />)
+    return this.props.tracks.map(name => <Track name={name} />)
   }
 
   render() {
@@ -69,16 +69,17 @@ class TrackList extends Component {
   }
 }
 
-class SpotifyLink extends Component {
+class Links extends Component {
   render() {
-    let { url } = this.props;
+    const { spotify, genius } = this.props;
 
     return(
-      <p className="release__spotify-link">
-        <SocialButton color="green" title="Listen on Spotify" url={url}>
+      <nav className="release__links">
+        <SocialButton color="green" title="Listen on Spotify" url={spotify}>
           <SpotifyIcon />
         </SocialButton>
-      </p>
+        <SocialButton color="yellow" title="View Lyrics on Genius" url={genius} />
+      </nav>
     )
   }
 }
@@ -119,18 +120,19 @@ export default class Release extends Component {
   }
 
   render() {
-    let {
+    const {
       name, description, tracks, spotify_url, cover
     } = this.props;
+    const genius_url = ''
 
     return(
       <article className="release">
-        <Cover src={cover} alt={name} />
+        <Cover src={cover.publicURL} alt={name} />
         <Content>
           <Title>{name}</Title>
           <Description>{description}</Description>
           <TrackList tracks={tracks} />
-          <SpotifyLink url={spotify_url} />
+          <Links spotify={spotify_url} genius={genius_url} />
         </Content>
       </article>
     );

@@ -1,32 +1,19 @@
 import './event-list.css';
 
 import React, { Component } from 'react'
-import { map } from 'lodash'
 import PropTypes from 'prop-types'
-import Mindbrain from 'mindbrain'
-import config from '../../package.json'
 import Event from './event'
 
 export default class EventList extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    filter: PropTypes.string.isRequired,
-    children: PropTypes.any.isRequired
+    events: PropTypes.array.isRequired
   }
-
-  state = { events: [] }
-  mindbrain = new Mindbrain(config)
 
   get events() {
-    let { events } = this.state;
-    return map(events, params => <Event {...params} key={params.id} />);
-  }
+    const { events } = this.props
 
-  componentWillMount() {
-    let { filter } = this.props
-
-    this.mindbrain.get(`events/${filter}`)
-                    .then(events => this.setState({ events }))
+    return events.map(({ node }) => <Event key={node.name} {...node} />)
   }
 
   render() {

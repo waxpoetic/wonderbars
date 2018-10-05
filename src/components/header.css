@@ -2,33 +2,40 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
-  font-size: 2.8em;
+  margin-bottom: 5vh;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  min-height: 7.3vh;
 }
-  .header__logo-wrapper {
+  .header__logo {
     font-family: var(--delhi);
     text-transform: uppercase;
-    transform: rotate(-15deg);
-    padding: 10vh 4vh 1vh;
-    right: 6vh;
-    position: relative;
-    top: -22vh;
-    width: 97vw;
-    z-index: -1;
   }
 
   .header__logo-text {
     background-color: white;
-    right: 5vw;
-    position: relative;
-    padding-left: 6vw;
     border-radius: 1vh;
     border: 0.4vw solid var(--red);
-
-    width: 200vw;
+    font-size: 2.8em;
+    padding-left: 1.5vw;
+    position: relative;
+    margin: 20px 0 0 60px;
+    right: 5vw;
+    width: 100vw;
 
     a {
       color: var(--red);
       text-decoration: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header__logo-text {
+      font-size: 1.5em;
+      margin: 20px auto;
+      width: 36vw;
+      padding-left: 3vw;
+      right: auto;
+      position: auto;
     }
   }
 

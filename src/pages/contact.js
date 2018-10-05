@@ -47,9 +47,9 @@ export default class Contact extends Component {
         <Video src={loop} className="contact-page__video-player" />
         <Title>Contact Us</Title>
         <Content>
-          <Role title="Management" name="Candice Johnson" email="candice@thewonderbars.com" />
-          <Role title="Booking" name="Candice Johnson" email="candice@thewonderbars.com" />
-          <Role title="Publicity" name="Candice Johnson" email="candice@thewonderbars.com" />
+          <Role title="Management" email="mgmt@thewonderbars.com" />
+          <Role title="Booking" email="book@thewonderbars.com" />
+          <Role title="Publicity" email="band@thewonderbars.com" />
         </Content>
       </Page>
     );

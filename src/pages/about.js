@@ -4,7 +4,7 @@ import Video from '../objects/video';
 import SocialButton from '../objects/social-button';
 import './about.css';
 import band from '../assets/us.jpg';
-// import loop from '../assets/loop.mp4';
+import loop from '../assets/loop.mp4';
 import FacebookIcon from 'react-icons/lib/fa/facebook-official';
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import InstagramIcon from 'react-icons/lib/fa/instagram';
@@ -51,7 +51,7 @@ export default class About extends Component {
             <SocialButton
               color="purple"
               title="Follow us on Instagram"
-              url="https://instagram.com/wonderbars">
+              url="https://instagram.com/thewonderbars">
               <InstagramIcon />
             </SocialButton>
             <SocialButton

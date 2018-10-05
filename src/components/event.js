@@ -2,31 +2,26 @@ import './event.css'
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Image from 'gatsby-image'
 
 export default class Event extends Component {
   static propTypes = {
-    facebook_id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
-  }
-
-  state = { image: null }
-
-  async componentDidMount() {
-    const { facebook_id } = this.props;
-    const image = await import(`../assets/wonderlust/${facebook_id}.png`);
-
-    this.setState({ image });
+    facebook_id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    guests: PropTypes.array,
+    location: PropTypes.string,
+    image: PropTypes.string
   }
 
   render() {
-    const { title, facebook_id } = this.props;
-    const { image } = this.state;
-    const href = `https://www.facebook.com/events/${facebook_id}/`;
+    const { name, facebook_id, image } = this.props
+    const href = `https://www.facebook.com/events/${facebook_id}/`
 
     return(
       <li className="event">
-        <a href={href} target="_blank" rel="noopener noreferer" title={title}>
-          {image && <img src={image} className="event__flyer" alt={title} />}
+        <a href={href} target="_blank" rel="noopener noreferer" title={name}>
+          <img src={image} className="event__flyer" alt={name} />
         </a>
       </li>
     );

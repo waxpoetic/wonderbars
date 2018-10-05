@@ -16,18 +16,12 @@
     color: var(--green);
     text-decoration: none;
   }
-  .release__spotify-link {
-    a {
-      text-decoration: none;
-      padding: 1vh;
-      border-radius: 2px;
-      background: #333;
-      color: lightgreen;
-      transition: background 1s ease-out;
+  .release__links {
+    display: flex;
+    justify-content: space-between;
 
-      &:hover {
-        background: #000;
-      }
+    a {
+      flex: 1;
     }
   }
 

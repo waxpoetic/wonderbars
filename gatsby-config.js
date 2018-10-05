@@ -1,8 +1,42 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'The Wonder Bars'
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: `${__dirname}/src/articles/`,
+        ignore: ['**/\.*'], // ignore files starting with a dot
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'assets',
+        path: `${__dirname}/src/assets`
+      },
+    },
+    'gatsby-transformer-remark',
+    'gatsby-transformer-yaml',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,

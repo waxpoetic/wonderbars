@@ -18,7 +18,6 @@ import { StaticQuery, graphql } from 'gatsby'
 
 // components
 import Header from './header'
-import Navigation from './navigation';
 import Footer from './footer';
 
 export default class Layout extends Component  {
@@ -51,7 +50,6 @@ export default class Layout extends Component  {
             >
               <html lang="en" />
             </Helmet>
-            <Navigation />
             <Header siteTitle={data.site.siteMetadata.title} />
             {children}
             <Footer />
