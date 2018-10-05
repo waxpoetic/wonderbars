@@ -75,7 +75,7 @@ export default class Events extends Component {
         <Content id="events">
           <EventList title="Upcoming" events={this.upcomingEvents} />
           <EventList title="Past" events={this.pastEvents} />
-          <Credits href="http://edencod.es">
+          <Credits href="#">
             Flyer Designs by <strong>Edie $yborg</strong>
           </Credits>
         </Content>

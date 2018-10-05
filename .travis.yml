@@ -3,4 +3,4 @@ after_success: yarn build
 deploy:
   provider: surge
   domain: wonderbars.surge.sh
-  project: ./dist
+  project: ./public
