@@ -73,7 +73,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         }
 
-        _.each(posts, createBlogPost)
+        // _.each(posts, createBlogPost)
         // _.each(events, createEvent)
       })
     )

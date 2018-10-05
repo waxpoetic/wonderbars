@@ -4,9 +4,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Page from '../objects/page'
-
-// TODO: shim
-class Article extends React.Component {}
+import Article from '../components/article'
 
 export default class BlogPostTemplate extends React.Component {
   render() {
