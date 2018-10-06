@@ -1,106 +1,164 @@
-<p align="center">
-  <a href="https://next.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# TheWonderBars.com
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
+This is the official site of **The Wonder Bars**, a live electronic
+music band from Philadelphia.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://next.gatsbyjs.org/docs/gatsby-starters/)._
+## Installation
 
-## 🚀 Quick start
+Install the [Gatsby][] CLI globally, if you don't already have v2.x
+installed
 
-1.  **Install the Gatsby CLI.**
+    yarn global add gatsby
 
-    The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
+Clone this repository
 
-    ```sh
-    # install the Gatsby CLI globally
-    npm install -g gatsby-cli
-    ```
+    git clone https://github.com/mindbrain/wonderbars.git
 
-2.  **Create a Gatsby site.**
+Install packages
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+    yarn install
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter
-    ```
+Run the server
 
-3.  **Start developing.**
+    yarn start
 
-    Navigate into your new site’s directory and start it up.
+Visit <http://localhost:8000> to view the site.
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+## Usage
 
-4.  **Open the source code and start editing!**
+To add a new page, create a `.md` file in **src/pages**. This can also
+be a `.js` file, but it must wrap the `<Page>` component with a unique ID.
 
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
+To add blog posts, create a `.md` file in **src/articles**. This will
+include some YAML front matter for metadata, and Markdown content for
+the post. Here's an example:
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+```markdown
+---
+title: Hello New York
+date: 2018-10-01
+category: tour
+---
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
+We're on tour in NYC and we love that $1 pizza.
+```
 
-  1.  **`/node_modules`**: The directory where all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for a tool called [Prettier](https://prettier.io/), which is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://next.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://next.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://next.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://next.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won’t change this file directly).
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
+To add events, create a `.yml` file in **src/data/events**. Events must
+have a `date:` and a `facebook_id:` in order to retrieve proper URL data
+and be sorted, but all other information is optional. Here's an example
+of event data:
 
-## 🎓 Learning Gatsby
+```yaml
+---
+name: The Big Time
+location: New York, NY
+description: ya finally made it sonny
+date: 2018-10-31
+facebook_id: 1234567890
+```
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://next.gatsbyjs.org/). Here are some places to start:
+Adding releases is similar. Create a new `.yml` file in
+**src/data/releases** with a minimum of two fields: the release `name:`
+and the `catalog_number:`. Here's an example of release data:
 
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://next.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+```yaml
+---
+name: The YT Album
+date: 2010-10-10
+catalog_number: MB007
+```
 
--   **To dive straight into code samples head [to our documentation](https://next.gatsbyjs.org/docs/).** In particular, check out the “Guides”, API reference, and “Advanced Tutorials” sections in the sidebar.
+## Architecture
 
-## 💫 Deploy
+The architecture of this application is based on [cssguidelin.es][] and
+an [ITCSS][]-based approach, with the JavaScript and markup following
+the organization of the CSS. Here's an overview of the directory
+structure:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+```
+src
+├── articles
+├── assets
+│   ├── releases
+│   └── wonderlust
+├── base
+├── components
+├── data
+│   ├── events
+│   └── releases
+├── images
+├── objects
+├── pages
+├── pages.orig
+├── settings
+│   └── fonts
+└── templates
+```
+
+### Settings
+
+Global CSS settings, including variable declarations and `@font-face`
+installation. Loaded first.
+
+### Base
+
+Includes the base layout styles, the `<Layout>` component that wraps all
+pages, and base typography styles for the entire application. Most base
+and settings styles are included when one wraps the `<Layout>`
+component, which happens as a result of rendering a `<Page>`.
+
+### Objects
+
+Objects have minimal styling, and are typically thought of as
+"interfaces" which are built upon either by styling or being wrapped in
+a component.
+
+### Components
+
+Code which shares common styles, behavior, and/or state. These are
+typically called on a page and make up the "pieces" of each page.
+
+### Data
+
+This is where the content for the application is contained, whether it
+be in structured YAML files for events and releases, or free-form
+content with YAML metadata for articles.
+
+### Pages
+
+The various static pages which make up the site. They are typically
+composed of various components, but all implement the `<Page>` object
+for site-wide standardization and metadata settings. Pages can be either
+bespoke components (defined in a `.js` file), content with metadata
+(defined in a `.md` file), or generated automatically using a template.
+
+### Templates
+
+Found in the **src/templates** directory, this is a feature of Gatsby
+which is used to compile bespoke pages for each blog post and static
+page. The `<PageTemplate>` component, for example, is used to compile
+`.md` files in **src/pages**, while the `<ArticleTemplate>` component is
+used to compile blog articles in **src/data/articles**.
+
+## Deployment
+
+Deployment is handled automatically with pushes to `master` of this
+repository. To deploy your changes manually, run the following command:
+
+    yarn deploy
+
+You'll need access to https://wonderbars.surge.sh to continue.
+
+## Contributing
+
+Create a [pull request][] to make content changes, or file a [new issue][]
+if you see something wrong. We're open to all kinds of contributions!
+Please make sure to follow the [code of conduct][] while interacting
+with this project.
+
+[Gatsby]: https://gatsbyjs.com
+[cssguidelin.es]: https://cssguidelin.es
+[ITCSS]: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+[pull request]: https://github.com/mindbrain/wonderbars/pulls
+[new issue]: https://github.com/mindbrain/wonderbars/issues/new
+[code of conduct]: https://github.com/mindbrain/wonderbars/CODE_OF_CONDUCT.md
