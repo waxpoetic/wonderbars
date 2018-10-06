@@ -79,17 +79,15 @@ structure:
 src
 ├── articles
 ├── assets
-│   ├── releases
-│   └── wonderlust
+│   ├── events
+│   └── releases
 ├── base
 ├── components
 ├── data
 │   ├── events
 │   └── releases
-├── images
 ├── objects
 ├── pages
-├── pages.orig
 ├── settings
 │   └── fonts
 └── templates

@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
-
-import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 import Page from '../objects/page'
 
 export default class PageTemplate extends Component {

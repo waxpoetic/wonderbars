@@ -3,7 +3,7 @@ import './page.css';
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-import Layout from '../components/layout'
+import Layout from '../base/layout'
 import { compact } from 'lodash'
 
 export class Title extends Component {

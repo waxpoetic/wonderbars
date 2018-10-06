@@ -7,8 +7,8 @@ import 'normalize.css';
 import 'animate.css';
 
 // base
-import '../base/layout.css';
-import '../base/typography.css';
+import './layout.css';
+import './typography.css';
 
 // objects
 import React, { Component } from 'react'
@@ -17,8 +17,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 // components
-import Header from './header'
-import Footer from './footer';
+import Header from '../components/header'
+import Footer from '../components/footer';
 
 export default class Layout extends Component  {
   static propTypes = {
