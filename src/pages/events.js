@@ -25,7 +25,7 @@ export const pageQuery = graphql`
       }
     }
 
-    allFile(filter: { relativeDirectory: { eq: "wonderlust" } }) {
+    allFile(filter: { relativeDirectory: { eq: "events" } }) {
       edges {
         node {
           publicURL
