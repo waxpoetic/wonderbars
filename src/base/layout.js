@@ -35,22 +35,24 @@ export default class Layout extends Component  {
             site {
               siteMetadata {
                 title
+                description
+                keywords
               }
             }
           }
         `}
-        render={data => (
+        render={({ site: { siteMetadata: { title, description, keywords } } }) => (
           <>
             <Helmet
-              title={data.site.siteMetadata.title}
+              title={title}
               meta={[
-                { name: 'description', content: 'Sample' },
-                { name: 'keywords', content: 'sample, something' },
+                { name: 'description', content: description },
+                { name: 'keywords', content: keywords.join(', ') },
               ]}
             >
               <html lang="en" />
             </Helmet>
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Header title={title} />
             {children}
             <Footer />
           </>

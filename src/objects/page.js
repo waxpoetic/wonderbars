@@ -9,6 +9,7 @@ import { compact } from 'lodash'
 export class Title extends Component {
   static propTypes = {
     className: PropTypes.string,
+    pageTitle: PropTypes.string,
     children: PropTypes.any.isRequired
   }
 
@@ -19,8 +20,8 @@ export class Title extends Component {
   }
 
   render() {
-    const text = this.props.children;
-    const pageTitle = `${text} - The Wonder Bars`
+    const text = this.props.children
+    const pageTitle = this.props.pageTitle || `${text} - The Wonder Bars`
 
     return(
       <section className={this.className}>

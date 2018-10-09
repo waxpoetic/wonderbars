@@ -1,6 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'The Wonder Bars'
+    title: 'The Wonder Bars',
+    description: 'Live House Music From Philadelphia',
+    keywords: [
+      'live',
+      'house',
+      'music',
+      'band',
+      'philadelphia'
+    ]
   },
   plugins: [
     {
