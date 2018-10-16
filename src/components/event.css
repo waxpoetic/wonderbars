@@ -1,8 +1,24 @@
 .event {
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
-.event__flyer {
+.event__flyer {}
+.event__info {}
+
+.event__image {
   max-height: 45vh;
+  max-width: 30vw;
+}
+
+.event__metadata {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  dt {
+    font-weight: bold;
+    text-align: right;
+  }
 }
