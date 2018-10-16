@@ -1,7 +1,6 @@
 .event {
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  text-align: center;
 }
 
 .event__flyer {}
@@ -12,11 +11,11 @@
   max-width: 30vw;
 }
 
-.event__metadata {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
+.event__info {
+  display: none;
+}
 
+.event__metadata {
   dt {
     font-weight: bold;
     text-align: right;
