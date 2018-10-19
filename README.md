@@ -145,7 +145,7 @@ repository. To deploy your changes manually, run the following command:
 
     yarn deploy
 
-You'll need access to https://wonderbars.surge.sh to continue.
+You'll need access to https://thewonderbars.com to continue.
 
 ## Contributing
 

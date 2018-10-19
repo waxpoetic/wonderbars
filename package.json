@@ -35,7 +35,7 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "deploy": "surge --project ./public --domain wonderbars.surge.sh"
+    "deploy": "gatsby build && surge --project ./public --domain thewonderbars.com"
   },
   "devDependencies": {
     "prettier": "^1.14.2"

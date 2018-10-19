@@ -2,5 +2,5 @@ language: node_js
 after_success: yarn build
 deploy:
   provider: surge
-  domain: wonderbars.surge.sh
+  domain: thewonderbars.com
   project: ./public
