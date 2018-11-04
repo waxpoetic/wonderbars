@@ -1,5 +1,18 @@
 .home-page {
+  background: white;
+  color: black;
 }
+
+  .home-page__content {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+  }
+
+  .home-page__image img {
+    width: 45vw;
+    height: 45vh;
+  }
 
   .home-page__video-player {
     position: fixed;
@@ -10,12 +23,15 @@
     width: auto;
     height: auto;
     z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-300vw) scale(10);
     background-size: cover;
     background-color: black;
   }
-
-  .home-page__title {
+  .home-page__social-buttons {
     text-align: center;
-    padding-top: 1vh;
+    padding-top: 5vh;
+
+    a {
+      margin: 0 10px;
+    }
   }
