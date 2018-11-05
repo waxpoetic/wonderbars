@@ -53,7 +53,6 @@ export default class Navigation extends Component {
       <div className={this.className} id="navigation" key="menu" style={this.style}>
         <nav>
           <Link className="navigation__link" to="/" onClick={refresh}>home</Link>
-          <Link className="navigation__link" to="/about" onClick={refresh}>about</Link>
           <Link className="navigation__link" to="/music" onClick={refresh}>music</Link>
           <Link className="navigation__link" to="/events" onClick={refresh}>events</Link>
           <Link className="navigation__link" to="/contact" onClick={refresh}>contact</Link>

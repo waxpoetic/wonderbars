@@ -10,6 +10,12 @@
   }
 }
 
+.social-button__title {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 .social-button--blue {
   background: var(--darkblue);
   color: var(--offwhite);

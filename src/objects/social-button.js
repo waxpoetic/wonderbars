@@ -22,8 +22,9 @@ export default class SocialButton extends Component {
     let icon = this.props.children;
 
     return(
-      <a href={url} title={title} className={this.className} target="_blank">
-        {icon} {title}
+      <a href={url} title={title} className={this.className} target="_blank" rel="noopener noreferrer">
+        {icon}
+        <span className="social-button__title">{title}</span>
       </a>
     );
   }

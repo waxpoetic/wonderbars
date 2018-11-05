@@ -28,7 +28,8 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
-    "react-icons": "^2.2.7"
+    "react-icons": "^2.2.7",
+    "react-mailchimp-subscribe": "^2.0.2"
   },
   "license": "MIT",
   "scripts": {
