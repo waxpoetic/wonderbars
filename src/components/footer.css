@@ -5,6 +5,18 @@
 
   input[type="email"] {
     margin-top: 3vh;
+    background: #333;
+    border: 1px solid #CCC;
+    color: #FFF;
+  }
+
+  button {
+    border: 0;
+    background: #333;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+    margin-left: 1vw;
   }
 }
   .email-signup__title {
