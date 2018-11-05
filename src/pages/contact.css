@@ -1,7 +1,9 @@
 .contact-page {}
 .contact-page .page__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
   .contact-page__video-player {
     position: fixed;

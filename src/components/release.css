@@ -42,8 +42,13 @@
     display: none;
     color: var(--lightgray);
     padding: 3vh;
+
     a {
       margin: 0 10px;
+
+      @media only screen and (max-width: 768px) {
+        margin: 0;
+      }
     }
   }
   .track__lyrics--open {
