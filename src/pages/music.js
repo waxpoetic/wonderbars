@@ -15,6 +15,7 @@ export const pageQuery = graphql`
           name
           description
           spotify_url
+          genius_url
           tracks
           catalog_number
         }
