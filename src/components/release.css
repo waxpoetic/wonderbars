@@ -13,15 +13,14 @@
   }
   .release__tracks {}
   .release__tracks a {
-    color: var(--green);
     text-decoration: none;
   }
   .release__links {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+    padding: 1vh;
 
     a {
-      flex: 1;
+      margin: 0 10px;
     }
   }
 
@@ -29,6 +28,24 @@
   .track-list__track {}
 
 .track {}
+  .track__name {
+    background: black;
+  }
+
+  .track__link {
+    color: var(--green);
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
   .track__lyrics {
+    display: none;
     color: var(--lightgray);
+    padding: 3vh;
+    a {
+      margin: 0 10px;
+    }
+  }
+  .track__lyrics--open {
+    display: block;
   }

@@ -2,15 +2,16 @@ import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Page, { Title, Content } from '../objects/page'
 import Video from '../objects/video'
-import SocialButton from '../objects/social-button';
+import SocialButton from '../objects/social-button'
 
 import './index.css'
 import loop from '../assets/loop.mp4'
-import band from '../assets/us.jpg';
-import FacebookIcon from 'react-icons/lib/fa/facebook-official';
-import TwitterIcon from 'react-icons/lib/fa/twitter';
-import InstagramIcon from 'react-icons/lib/fa/instagram';
-import SpotifyIcon from 'react-icons/lib/fa/spotify';
+import band from '../assets/us.jpg'
+import FacebookIcon from 'react-icons/lib/fa/facebook-official'
+import TwitterIcon from 'react-icons/lib/fa/twitter'
+import InstagramIcon from 'react-icons/lib/fa/instagram'
+import SpotifyIcon from 'react-icons/lib/fa/spotify'
+import GeniusLogo from '../components/genius-logo'
 
 export const pageQuery = graphql`
   query HomePageQuery {
@@ -55,6 +56,12 @@ export default class Home extends Component {
                 title="Listen to us on Spotify"
                 url="https://open.spotify.com/artist/2nrkwnQWEqM20n92QC7Cdy">
                 <SpotifyIcon />
+              </SocialButton>
+              <SocialButton
+                color="yellow"
+                title="View Lyrics on Genius"
+                url="https://genius.com/artists/The-wonder-bars">
+                <GeniusLogo />
               </SocialButton>
             </nav>
           </section>

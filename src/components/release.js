@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 import { isEmpty } from 'lodash'
 import PropTypes from 'prop-types'
 import SpotifyIcon from 'react-icons/lib/fa/spotify'
-// import GeniusIcon from 'react-icons/lib/fa/genius'
 import SocialButton from '../objects/social-button'
+import GeniusLogo from '../components/genius-logo'
 
 class Description extends Component {
   render() {
@@ -18,23 +18,20 @@ class Description extends Component {
 class Track extends Component {
   state = { showLyrics: false }
 
-  get lyrics() {
+  toggleLyrics(event) {
     let { showLyrics } = this.state
-    let { lyrics } = this.props
-
-    if (showLyrics && !isEmpty(lyrics)) {
-      return <p>{lyrics}</p>
-    } else if (showLyrics) {
-      return <p><em>Lyrics not available.</em></p>
-    } else {
-      return <></>
-    }
+    event.preventDefault()
+    this.setState({ showLyrics: !showLyrics })
   }
 
-  toggleLyrics(event) {
-    event.preventDefault()
+  get lyricsClassName() {
     let { showLyrics } = this.state
-    this.setState({ showLyrics: !showLyrics })
+
+    if (showLyrics) {
+      return 'track__lyrics animated fadeInDown track__lyrics--open'
+    } else {
+      return 'track__lyrics'
+    }
   }
 
   render() {
@@ -44,10 +41,15 @@ class Track extends Component {
     return(
       <li className="track-list__track">
         <section className="track__name">
-          <a href="#lyrics" onClick={toggleLyrics}>{name}</a>
+          <p onClick={toggleLyrics} className="track__link">{name}</p>
         </section>
-        <section className="track__lyrics">
-          {this.lyrics}
+        <section className={this.lyricsClassName}>
+          <SocialButton key="spotify" color="green" title="Listen on Spotify">
+            <SpotifyIcon />
+          </SocialButton>
+          <SocialButton key="genius" color="yellow" title="View Lyrics on Genius">
+            <GeniusLogo />
+          </SocialButton>
         </section>
       </li>
     )
@@ -56,7 +58,7 @@ class Track extends Component {
 
 class TrackList extends Component {
   get tracks() {
-    return this.props.tracks.map(name => <Track name={name} />)
+    return this.props.tracks.map(name => <Track key={name} name={name} />)
   }
 
   render() {
@@ -78,7 +80,9 @@ class Links extends Component {
         <SocialButton color="green" title="Listen on Spotify" url={spotify}>
           <SpotifyIcon />
         </SocialButton>
-        <SocialButton color="yellow" title="View Lyrics on Genius" url={genius} />
+        <SocialButton color="yellow" title="View Lyrics on Genius" url={genius}>
+          <GeniusLogo />
+        </SocialButton>
       </nav>
     )
   }
@@ -116,14 +120,14 @@ export default class Release extends Component {
     description: PropTypes.string,
     tracks: PropTypes.array,
     spotify_url: PropTypes.string,
-    cover: PropTypes.string
+    genius_url: PropTypes.string,
+    cover: PropTypes.object
   }
 
   render() {
     const {
-      name, description, tracks, spotify_url, cover
+      name, description, tracks, spotify_url, genius_url, cover
     } = this.props;
-    const genius_url = ''
 
     return(
       <article className="release">
