@@ -1,5 +1,5 @@
 language: node_js
-after_success: yarn build
+script: yarn build
 deploy:
   provider: surge
   domain: thewonderbars.com
