@@ -4,17 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const _ = require('lodash')
+// const _ = require('lodash')
 const Promise = require('bluebird')
-const path = require('path')
+// const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createRedirect } = actions
 
   return new Promise((resolve, reject) => {
-    const BlogPost = path.resolve('./src/templates/blog-post.js')
-    const Page = path.resolve('./src/templates/page.js')
+    // const BlogPost = path.resolve('./src/templates/blog-post.js')
+    // const Page = path.resolve('./src/templates/page.js')
 
     resolve(
       graphql(
@@ -54,24 +54,31 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges;
-        const events = result.data.allEventsYaml.edges;
-        const createBlogPost = (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node
-          const next = index === 0 ? null : posts[index - 1].node
-          const { fields: { slug }, frontmatter: { date } } = post.node
-          const component = date === null ? Page : BlogPost
+        // const posts = result.data.allMarkdownRemark.edges;
+        // const events = result.data.allEventsYaml.edges;
+        // const createBlogPost = (post, index) => {
+        //   const previous = index === posts.length - 1 ? null : posts[index + 1].node
+        //   const next = index === 0 ? null : posts[index - 1].node
+        //   const { fields: { slug }, frontmatter: { date } } = post.node
+        //   const component = date === null ? Page : BlogPost
 
-          createPage({
-            path: slug,
-            component,
-            context: {
-              slug,
-              previous,
-              next,
-            },
-          })
-        }
+        //   createPage({
+        //     path: slug,
+        //     component,
+        //     context: {
+        //       slug,
+        //       previous,
+        //       next,
+        //     },
+        //   })
+        // }
+
+        createRedirect({
+          fromPath: '/about',
+          isPermanent: true,
+          redirectInBrowser: true,
+          toPath: '/'
+        })
 
         // _.each(posts, createBlogPost)
         // _.each(events, createEvent)
