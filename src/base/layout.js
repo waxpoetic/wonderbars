@@ -18,7 +18,9 @@ import { StaticQuery, graphql } from 'gatsby'
 
 // components
 import Header from '../components/header'
-import Footer from '../components/footer';
+import Footer from '../components/footer'
+
+import playing from '../assets/playing.jpg'
 
 export default class Layout extends Component  {
   static propTypes = {
@@ -48,6 +50,10 @@ export default class Layout extends Component  {
               meta={[
                 { name: 'description', content: description },
                 { name: 'keywords', content: keywords.join(', ') },
+                { name: 'og:image', content: playing },
+                { name: 'og:url', content: 'http://thewonderbars.com' },
+                { name: 'og:type', content: 'website' },
+                { name: 'fb:app_id', content: 'website' }
               ]}
             >
               <html lang="en" />

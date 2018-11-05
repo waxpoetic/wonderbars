@@ -29,7 +29,7 @@ export default class Home extends Component {
     return(
       <Page id="home">
         <Video src={loop} className="home-page__video-player" />
-        <Title className="home-page__title">We Are The Wonder Bars</Title>
+        <Title pageTitle="The Wonder Bars" className="home-page__title">We Are The Wonder Bars</Title>
         <Content className="home-page__content">
           <section className="home-page__content-block home-page__subtitle">
             <nav className="home-page__social-buttons">
