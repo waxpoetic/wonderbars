@@ -1,17 +1,16 @@
 .home-page {
-  background: white;
+  background: transparent;
   color: black;
 }
 
-  .home-page__content {
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 50% 50%;
+  .home-page__title {
+    color: white;
+    text-align: center;
   }
 
-  .home-page__image img {
-    width: 45vw;
-    height: 45vh;
+  .home-page__content-block {
+    background: white;
+    padding: 1vh;
   }
 
   .home-page__video-player {
@@ -27,11 +26,29 @@
     background-size: cover;
     background-color: black;
   }
+
   .home-page__social-buttons {
     text-align: center;
-    padding-top: 5vh;
+    padding: 1vh;
 
     a {
       margin: 0 10px;
+    }
+  }
+
+  .home-page__band-photo {
+    position: relative;
+
+    img {
+      display: block;
+      max-width: 80vw;
+      margin-bottom: 3vh;
+    }
+
+    h2 {
+      position: absolute;
+      padding: 1vh;
+      background: white;
+      bottom: 0;
     }
   }
