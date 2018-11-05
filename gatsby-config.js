@@ -69,6 +69,24 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-32186780-1",
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Enables Google Optimize using your container Id
+        // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        // Any additional create only fields (optional)
+        // sampleRate: 5,
+        // siteSpeedSampleRate: 10,
+        // cookieDomain: "thewonderbars.com"
+      },
+    },
     'gatsby-plugin-offline'
   ],
 }
