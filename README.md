@@ -1,5 +1,8 @@
 # TheWonderBars.com
 
+[![Build Status](https://travis-ci.org/waxpoetic/wonderbars.svg?branch=master)](https://travis-ci.org/waxpoetic/wonderbars)
+[![Maintainability](https://api.codeclimate.com/v1/badges/266291aec82b3536abff/maintainability)](https://codeclimate.com/github/waxpoetic/wonderbars/maintainability)
+
 This is the official site of **The Wonder Bars**, a live electronic
 music band from Philadelphia.
 
