@@ -4,7 +4,11 @@ import Page from '../objects/page'
 
 export default class PageTemplate extends Component {
   render() {
-    const { id, html, frontmatter: { title } } = this.props.data.markdownRemark
+    const {
+      id,
+      html,
+      frontmatter: { title },
+    } = this.props.data.markdownRemark
     const cover = this.props.data.markdownRemark.frontmatter.cover.publicURL
 
     return (

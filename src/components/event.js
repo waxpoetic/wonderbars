@@ -13,7 +13,7 @@ export default class Event extends Component {
     location: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    price: PropTypes.number
+    price: PropTypes.number,
   }
 
   get price() {
@@ -27,13 +27,10 @@ export default class Event extends Component {
   }
 
   render() {
-    const {
-      name, facebook_id, image,
-      description, location, date,
-    } = this.props
+    const { name, facebook_id, image, description, location, date } = this.props
     const href = `https://www.facebook.com/events/${facebook_id}/`
 
-    return(
+    return (
       <li className="event">
         <div className="event__flyer">
           <a href={href} rel="noopener noreferer" title={name}>
@@ -52,6 +49,6 @@ export default class Event extends Component {
           </dl>
         </div>
       </li>
-    );
+    )
   }
-};
+}

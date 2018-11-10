@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   font-size: var(--base-font-size);
   font-family: var(--base-font-family);
 }

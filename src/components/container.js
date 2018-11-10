@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-export default class Container extends Component {
-}
+export default class Container extends Component {}

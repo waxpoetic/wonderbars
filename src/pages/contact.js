@@ -10,15 +10,15 @@ class Role extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired
+    email: PropTypes.string.isRequired,
   }
 
   get id() {
-    return this.props.title.toLowerCase();
+    return this.props.title.toLowerCase()
   }
 
   get className() {
-    return `role role--${this.id}`;
+    return `role role--${this.id}`
   }
 
   get mailto() {
@@ -26,23 +26,21 @@ class Role extends Component {
   }
 
   render() {
-    return(
+    return (
       <address className={this.className}>
         <h2 className="role__title">{this.props.title}</h2>
-        <p className="role__name">
-          {this.props.name}
-        </p>
+        <p className="role__name">{this.props.name}</p>
         <p className="role__email">
           <a href={this.mailto}>{this.props.email}</a>
         </p>
       </address>
-    );
+    )
   }
 }
 
 export default class Contact extends Component {
   render() {
-    return(
+    return (
       <Page id="contact">
         <Video src={loop} className="contact-page__video-player" />
         <Title>Contact Us</Title>
@@ -52,6 +50,6 @@ export default class Contact extends Component {
           <Role title="Publicity" email="band@thewonderbars.com" />
         </Content>
       </Page>
-    );
+    )
   }
 }

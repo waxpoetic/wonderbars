@@ -6,15 +6,17 @@ import PropTypes from 'prop-types'
 export default class Credits extends Component {
   static propTypes = {
     href: PropTypes.string.isRequired,
-    children: PropTypes.any.isRequired
-  };
+    children: PropTypes.any.isRequired,
+  }
 
   render() {
-    const { href, children } = this.props;
+    const { href, children } = this.props
 
-    return(
+    return (
       <p className="credits">
-        <a href={href} title="who made this?">{children}</a>
+        <a href={href} title="who made this?">
+          {children}
+        </a>
       </p>
     )
   }

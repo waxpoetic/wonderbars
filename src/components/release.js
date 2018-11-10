@@ -35,19 +35,25 @@ class Track extends Component {
   }
 
   render() {
-    let { name } = this.props;
-    let toggleLyrics = this.toggleLyrics.bind(this);
+    let { name } = this.props
+    let toggleLyrics = this.toggleLyrics.bind(this)
 
-    return(
+    return (
       <li className="track-list__track">
         <section className="track__name">
-          <p onClick={toggleLyrics} className="track__link">{name}</p>
+          <p onClick={toggleLyrics} className="track__link">
+            {name}
+          </p>
         </section>
         <section className={this.lyricsClassName}>
           <SocialButton key="spotify" color="green" title="Listen on Spotify">
             <SpotifyIcon />
           </SocialButton>
-          <SocialButton key="genius" color="yellow" title="View Lyrics on Genius">
+          <SocialButton
+            key="genius"
+            color="yellow"
+            title="View Lyrics on Genius"
+          >
             <GeniusLogo />
           </SocialButton>
         </section>
@@ -66,16 +72,16 @@ class TrackList extends Component {
       <h3 key="heading">Track Listing:</h3>,
       <ol key="list" className="release__tracks track-list">
         {this.tracks}
-      </ol>
+      </ol>,
     ]
   }
 }
 
 class Links extends Component {
   render() {
-    const { spotify, genius } = this.props;
+    const { spotify, genius } = this.props
 
-    return(
+    return (
       <nav className="release__links">
         <SocialButton color="green" title="Listen on Spotify" url={spotify}>
           <SpotifyIcon />
@@ -90,7 +96,7 @@ class Links extends Component {
 
 class Title extends Component {
   render() {
-    let name = this.props.children;
+    let name = this.props.children
     return <h2 className="release__name">{name}</h2>
   }
 }
@@ -99,7 +105,7 @@ class Cover extends Component {
   render() {
     let { src, name } = this.props
 
-    return(
+    return (
       <div className="release__image">
         <img src={src} alt={name} />
       </div>
@@ -121,15 +127,20 @@ export default class Release extends Component {
     tracks: PropTypes.array,
     spotify_url: PropTypes.string,
     genius_url: PropTypes.string,
-    cover: PropTypes.object
+    cover: PropTypes.object,
   }
 
   render() {
     const {
-      name, description, tracks, spotify_url, genius_url, cover
-    } = this.props;
+      name,
+      description,
+      tracks,
+      spotify_url,
+      genius_url,
+      cover,
+    } = this.props
 
-    return(
+    return (
       <article className="release">
         <Cover src={cover.publicURL} alt={name} />
         <Content>
@@ -139,6 +150,6 @@ export default class Release extends Component {
           <Links spotify={spotify_url} genius={genius_url} />
         </Content>
       </article>
-    );
+    )
   }
 }

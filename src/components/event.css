@@ -4,7 +4,6 @@
 }
 
 .event__flyer {}
-.event__info {}
 
 .event__image {
   max-height: 45vh;
@@ -16,6 +15,7 @@
 }
 
 .event__metadata {
+
   dt {
     font-weight: bold;
     text-align: right;

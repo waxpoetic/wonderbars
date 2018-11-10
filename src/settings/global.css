@@ -2,19 +2,19 @@
   /* colors */
   --black: #000;
   --teal: #008080;
-  --white: #FFF;
-  --lightblue: #ADD8E6;
-  --darkblue: #00008B;
-  --green: #90EE90;
+  --white: #fff;
+  --lightblue: #add8e6;
+  --darkblue: #00008b;
+  --green: #90ee90;
   --gray: #333;
   --purple: purple;
   --darkerblue: #000065;
-  --darkteal: #005A5A;
+  --darkteal: #005a5a;
   --darkgray: #342424;
   --lightgray: lightgray;
   --darkpurple: #610078;
   --offwhite: #f8f8ff;
-  --red: #FF0000;
+  --red: #f00;
   --yellow: #ffff64;
 
   /* fonts */
@@ -27,5 +27,4 @@
   --base-font-family: var(--mosk);
   --primary-color: #000;
   --background-color: #000;
-
 }

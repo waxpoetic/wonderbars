@@ -20,7 +20,10 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+            allMarkdownRemark(
+              sort: { fields: [frontmatter___date], order: DESC }
+              limit: 1000
+            ) {
               edges {
                 node {
                   fields {
@@ -77,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
           fromPath: '/about',
           isPermanent: true,
           redirectInBrowser: true,
-          toPath: '/'
+          toPath: '/',
         })
 
         // _.each(posts, createBlogPost)

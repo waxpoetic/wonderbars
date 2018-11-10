@@ -64,11 +64,10 @@ export default class Events extends Component {
     return this.events.filter(({ node }) => {
       return moment(node.date).isBefore(TODAY)
     })
-
   }
 
   render() {
-    return(
+    return (
       <Page id="events">
         <Title>Events</Title>
         <Video src={loop} className="events-page__video-player" />
@@ -80,6 +79,6 @@ export default class Events extends Component {
           </Credits>
         </Content>
       </Page>
-    );
+    )
   }
 }

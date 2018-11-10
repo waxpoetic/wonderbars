@@ -2,13 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'The Wonder Bars',
     description: 'Live House Music From Philadelphia',
-    keywords: [
-      'live',
-      'house',
-      'music',
-      'band',
-      'philadelphia'
-    ]
+    keywords: ['live', 'house', 'music', 'band', 'philadelphia'],
   },
   plugins: [
     {
@@ -31,14 +25,14 @@ module.exports = {
       options: {
         name: 'articles',
         path: `${__dirname}/src/articles/`,
-        ignore: ['**/\.*'], // ignore files starting with a dot
-      }
+        ignore: ['**/.*'], // ignore files starting with a dot
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'assets',
-        path: `${__dirname}/src/assets`
+        path: `${__dirname}/src/assets`,
       },
     },
     'gatsby-transformer-remark',
@@ -65,14 +59,14 @@ module.exports = {
           require('postcss-preset-env')({ stage: 0 }),
           require('postcss-nested'),
           require('postcss-bem-linter'),
-          require('postcss-inline-comment')
-        ]
-      }
+          require('postcss-inline-comment'),
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-32186780-1",
+        trackingId: 'UA-32186780-1',
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -87,6 +81,6 @@ module.exports = {
         // cookieDomain: "thewonderbars.com"
       },
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
   ],
 }

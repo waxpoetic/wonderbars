@@ -26,41 +26,48 @@ export const pageQuery = graphql`
 
 export default class Home extends Component {
   render() {
-    return(
+    return (
       <Page id="home">
         <Video src={loop} className="home-page__video-player" />
-        <Title pageTitle="The Wonder Bars" className="home-page__title">We Are The Wonder Bars</Title>
+        <Title pageTitle="The Wonder Bars" className="home-page__title">
+          We Are The Wonder Bars
+        </Title>
         <Content className="home-page__content">
           <section className="home-page__content-block home-page__subtitle">
             <nav className="home-page__social-buttons">
               <SocialButton
                 color="blue"
                 title="Like us on Facebook"
-                url="https://facebook.com/wonderbars">
+                url="https://facebook.com/wonderbars"
+              >
                 <FacebookIcon />
               </SocialButton>
               <SocialButton
                 color="teal"
                 title="Follow us on Twitter"
-                url="https://twitter.com/wonderbars">
+                url="https://twitter.com/wonderbars"
+              >
                 <TwitterIcon />
               </SocialButton>
               <SocialButton
                 color="purple"
                 title="Follow us on Instagram"
-                url="https://instagram.com/thewonderbars">
+                url="https://instagram.com/thewonderbars"
+              >
                 <InstagramIcon />
               </SocialButton>
               <SocialButton
                 color="green"
                 title="Listen to us on Spotify"
-                url="https://open.spotify.com/artist/2nrkwnQWEqM20n92QC7Cdy">
+                url="https://open.spotify.com/artist/2nrkwnQWEqM20n92QC7Cdy"
+              >
                 <SpotifyIcon />
               </SocialButton>
               <SocialButton
                 color="yellow"
                 title="View Lyrics on Genius"
-                url="https://genius.com/artists/The-wonder-bars">
+                url="https://genius.com/artists/The-wonder-bars"
+              >
                 <GeniusLogo />
               </SocialButton>
             </nav>
@@ -79,16 +86,16 @@ export default class Home extends Component {
               <p>
                 With their roots in the worldwide jamtronica and electronic
                 scenes, this four-piece outfit of live improvisation, theatrics,
-                and soulful content have already begun making waves in their hometown of
-                Philadelphia. By combining their exceptional DJ/sound design skills with
-                virtuosic musicianship, The Wonder Bars pique the interest of dancers,
-                DJs, musicians, songwriters, and anyone who appreciates an
-                amazing live show.
+                and soulful content have already begun making waves in their
+                hometown of Philadelphia. By combining their exceptional
+                DJ/sound design skills with virtuosic musicianship, The Wonder
+                Bars pique the interest of dancers, DJs, musicians, songwriters,
+                and anyone who appreciates an amazing live show.
               </p>
             </div>
           </section>
         </Content>
       </Page>
-    );
+    )
   }
 }

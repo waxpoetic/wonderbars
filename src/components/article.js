@@ -4,13 +4,16 @@ import PropTypes from 'prop-types'
 class Article extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired
+    date: PropTypes.string.isRequired,
   }
 
   render() {
-    const { html, frontmatter: { title, date } } = this.props
+    const {
+      html,
+      frontmatter: { title, date },
+    } = this.props
 
-    return(
+    return (
       <article>
         <header>
           <h2>{title}</h2>

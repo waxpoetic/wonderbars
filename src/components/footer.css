@@ -6,8 +6,8 @@
   input[type="email"] {
     margin-top: 3vh;
     background: #333;
-    border: 1px solid #CCC;
-    color: #FFF;
+    border: 1px solid #ccc;
+    color: #fff;
   }
 
   button {
@@ -19,11 +19,12 @@
     margin-left: 1vw;
   }
 }
-  .email-signup__title {
-    text-align: center;
-    padding-top: 1vh;
-  }
 
-  .email-signup__form {
-    text-align: center;
-  }
+.email-signup__title {
+  text-align: center;
+  padding-top: 1vh;
+}
+
+.email-signup__form {
+  text-align: center;
+}

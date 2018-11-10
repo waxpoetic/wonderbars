@@ -6,13 +6,13 @@ import './header.css'
 
 export default class Header extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
   }
 
   render() {
     const { title } = this.props
 
-    return(
+    return (
       <header className="header">
         <div className="header__navigation">
           <Navigation />
@@ -23,6 +23,6 @@ export default class Header extends Component {
           </p>
         </div>
       </header>
-    );
+    )
   }
 }

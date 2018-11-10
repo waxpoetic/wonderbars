@@ -23,18 +23,16 @@ export default class BlogPostTemplate extends React.Component {
         <Article {...post} />
         <footer className="aux">
           <nav className="navigation aux__navigation">
-            {
-              previous &&
+            {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
-            }
-            {
-              next &&
+            )}
+            {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
-            }
+            )}
           </nav>
         </footer>
       </Page>

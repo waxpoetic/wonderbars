@@ -36,11 +36,13 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
+    "format": "prettier --write 'src/**/*.js' && stylelint src/**/*.css --fix",
+    "lint": "stylelint src/**/*.css",
     "deploy": "gatsby build && surge --project ./public --domain thewonderbars.com"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "stylelint-config-standard": "^18.2.0"
   },
   "repository": {
     "type": "git",

@@ -39,7 +39,7 @@ export default class Music extends Component {
     const releases = allReleasesYaml.edges.map(edge => edge.node)
     const images = allFile.edges.map(edge => edge.node)
 
-    return releases.map((release) => {
+    return releases.map(release => {
       const { catalog_number } = release
       const cover = images.find(image => {
         if (catalog_number) {
@@ -54,13 +54,11 @@ export default class Music extends Component {
   }
 
   render() {
-    return(
+    return (
       <Page id="music">
         <Video src={loop} className="music-page__video-player" />
         <Title>Music</Title>
-        <Content>
-          {this.releases}
-        </Content>
+        <Content>{this.releases}</Content>
       </Page>
     )
   }

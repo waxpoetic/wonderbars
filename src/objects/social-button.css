@@ -34,7 +34,6 @@
   &:hover {
     background: var(--darkteal);
   }
-
 }
 
 .social-button--green {
@@ -64,5 +63,3 @@
     color: var(--offwhite);
   }
 }
-
-

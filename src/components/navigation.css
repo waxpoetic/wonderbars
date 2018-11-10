@@ -19,9 +19,9 @@
   text-decoration: none;
   padding-right: 1vw;
 
-   &:hover {
-      color: white;
-    }
+  &:hover {
+    color: white;
+  }
 }
 
 .navigation--open {
@@ -37,21 +37,21 @@
   }
 }
 
-  .navigation__link {
-    color: gray;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    text-transform: uppercase;
+.navigation__link {
+  color: gray;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
 
-    &:hover {
-      color: white;
-    }
+  &:hover {
+    color: white;
   }
+}
 
-    .navigation__link--active {
-      color: #444;
-    }
+.navigation__link--active {
+  color: #444;
+}
 
 .navigation__hamburger-button {
   font-size: 3em;

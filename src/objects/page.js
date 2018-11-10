@@ -1,4 +1,4 @@
-import './page.css';
+import './page.css'
 
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
@@ -10,11 +10,11 @@ export class Title extends Component {
   static propTypes = {
     className: PropTypes.string,
     pageTitle: PropTypes.string,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
   }
 
   get className() {
-    let { className } = this.props;
+    let { className } = this.props
 
     return compact(['page__title', className]).join(' ')
   }
@@ -23,58 +23,52 @@ export class Title extends Component {
     const text = this.props.children
     const pageTitle = this.props.pageTitle || `${text} - The Wonder Bars`
 
-    return(
+    return (
       <section className={this.className}>
         <Helmet title={pageTitle} />
         <h1>{text}</h1>
       </section>
-    );
+    )
   }
 }
 
 export class Content extends Component {
   static propTypes = {
     className: PropTypes.string,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
   }
 
   get className() {
-    let { className } = this.props;
+    let { className } = this.props
     if (className) return `page__content ${className}`
 
     return 'page__content'
   }
 
   render() {
-    let { children } = this.props;
+    let { children } = this.props
 
-    return(
-      <section className={this.className}>
-        {children}
-      </section>
-    );
+    return <section className={this.className}>{children}</section>
   }
 }
 
 export default class Page extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
   }
 
   get className() {
-    return `page ${this.props.id}-page`;
+    return `page ${this.props.id}-page`
   }
 
   render() {
-    let { children } = this.props;
+    let { children } = this.props
 
-    return(
+    return (
       <Layout>
-        <main className={this.className}>
-          {children}
-        </main>
+        <main className={this.className}>{children}</main>
       </Layout>
-    );
+    )
   }
 }

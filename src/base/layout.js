@@ -1,14 +1,14 @@
 // settings
-import '../settings/fonts.css';
-import '../settings/global.css';
+import '../settings/fonts.css'
+import '../settings/global.css'
 
 // tools
-import 'normalize.css';
-import 'animate.css';
+import 'normalize.css'
+import 'animate.css'
 
 // base
-import './layout.css';
-import './typography.css';
+import './layout.css'
+import './typography.css'
 
 // objects
 import React, { Component } from 'react'
@@ -22,7 +22,7 @@ import Footer from '../components/footer'
 
 import playing from '../assets/playing.jpg'
 
-export default class Layout extends Component  {
+export default class Layout extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   }
@@ -30,7 +30,7 @@ export default class Layout extends Component  {
   render() {
     const { children } = this.props
 
-    return(
+    return (
       <StaticQuery
         query={graphql`
           query SiteTitleQuery {
@@ -43,7 +43,11 @@ export default class Layout extends Component  {
             }
           }
         `}
-        render={({ site: { siteMetadata: { title, description, keywords } } }) => (
+        render={({
+          site: {
+            siteMetadata: { title, description, keywords },
+          },
+        }) => (
           <>
             <Helmet
               title={title}
@@ -53,7 +57,7 @@ export default class Layout extends Component  {
                 { name: 'og:image', content: playing },
                 { name: 'og:url', content: 'http://thewonderbars.com' },
                 { name: 'og:type', content: 'website' },
-                { name: 'fb:app_id', content: 'website' }
+                { name: 'fb:app_id', content: 'website' },
               ]}
             >
               <html lang="en" />
