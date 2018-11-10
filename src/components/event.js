@@ -13,14 +13,23 @@ export default class Event extends Component {
     location: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.number
+  }
+
+  get price() {
+    const { price } = this.props
+
+    if (price) {
+      return `$${price}`
+    } else {
+      return 'FREE'
+    }
   }
 
   render() {
     const {
       name, facebook_id, image,
       description, location, date,
-      cover, price
     } = this.props
     const href = `https://www.facebook.com/events/${facebook_id}/`
 
@@ -38,6 +47,8 @@ export default class Event extends Component {
             <dd>{location}</dd>
             <dt>When:</dt>
             <dd>{date}</dd>
+            <dt>Cover:</dt>
+            <dd>{this.price}</dd>
           </dl>
         </div>
       </li>
