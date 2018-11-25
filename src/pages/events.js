@@ -63,7 +63,7 @@ export default class Events extends Component {
   get pastEvents() {
     return this.events.filter(({ node }) => {
       return moment(node.date).isBefore(TODAY)
-    })
+    }).reverse()
   }
 
   render() {
