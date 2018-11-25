@@ -44,6 +44,7 @@ export default class VolumeButton extends Component {
 
   componentDidMount() {
     this.player.volume = this.state.volume
+    this.player.removeAttribute('muted')
   }
 
   render() {
