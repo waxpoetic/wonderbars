@@ -1,6 +1,5 @@
 .home-page {
   background: transparent;
-  color: black;
 }
 
 .home-page__title {
@@ -9,7 +8,8 @@
 }
 
 .home-page__content-block {
-  background: white;
+  background: var(--white);
+  color: var(--black);
   padding: 1vh;
   margin-bottom: 3vh;
 
@@ -56,6 +56,7 @@
     position: absolute;
     padding: 1vh;
     background: white;
+    color: var(--black);
     bottom: -31px;
 
     @media only screen and (max-width: 850px) {
