@@ -5,9 +5,10 @@
 
   input[type="email"] {
     margin-top: 3vh;
-    background: #333;
-    border: 1px solid #ccc;
-    color: #fff;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    color: var(--white);
   }
 
   button {
