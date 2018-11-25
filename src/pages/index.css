@@ -29,7 +29,7 @@
   width: auto;
   height: auto;
   z-index: -100;
-  transform: translateX(-300vw) scale(10);
+  transform: translateX(-300vw) scale(30) skewX(15deg);
   background-size: cover;
   background-color: black;
 }
@@ -43,13 +43,13 @@
   }
 }
 
-.home-page__band-photo {
+.home-page__band {
   position: relative;
 
-  img {
+  video {
     display: block;
     max-width: 80vw;
-    margin-bottom: 3vh;
+    margin: 0 auto 3vh auto;
   }
 
   h2 {

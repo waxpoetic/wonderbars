@@ -7,6 +7,7 @@ export default class Video extends Component {
   static propTypes = {
     className: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
+    alt: PropTypes.string
   }
 
   get id() {
@@ -28,10 +29,10 @@ export default class Video extends Component {
   }
 
   render() {
-    let { src } = this.props
+    let { src, alt } = this.props
 
     return (
-      <video id={this.id} className={this.className} autoPlay loop>
+      <video id={this.id} title={alt} className={this.className} autoPlay loop>
         <source src={src} />
       </video>
     )
