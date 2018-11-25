@@ -17,3 +17,8 @@
   font-family: 'Delhi';
   src: url('fonts/delhi.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Mosk';
+  src: url('fonts/mosk-normal.woff') format('woff');
+}

@@ -82,7 +82,7 @@ export default class Home extends Component {
 
           <section className="home-page__content-block">
             <div className="home-page__biography">
-              <h2>Who Are We?</h2>
+              <h2>Who are we?</h2>
               <p>
                 With their roots in the worldwide jamtronica and electronic
                 scenes, this four-piece outfit of live improvisation, theatrics,
@@ -91,6 +91,16 @@ export default class Home extends Component {
                 DJ/sound design skills with virtuosic musicianship, The Wonder
                 Bars pique the interest of dancers, DJs, musicians, songwriters,
                 and anyone who appreciates an amazing live show.
+              </p>
+            </div>
+          </section>
+
+          <section className="home-page__content-block">
+            <div className="home-page__biography">
+              <h2>Give us a shout!</h2>
+              <p>
+                Wanna book us?
+                Email <a href="mailto:book@thewonderbars.com">book@thewonderbars.com</a>
               </p>
             </div>
           </section>

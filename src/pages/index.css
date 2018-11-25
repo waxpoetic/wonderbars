@@ -11,6 +11,7 @@
 .home-page__content-block {
   background: white;
   padding: 1vh;
+  margin-bottom: 3vh;
 
   h2 {
     @media only screen and (max-width: 768px) {
