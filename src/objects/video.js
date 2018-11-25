@@ -31,7 +31,7 @@ export default class Video extends Component {
   render() {
     let { src, alt } = this.props
 
-    return (
+    return(
       <video id={this.id} title={alt} className={this.className} autoPlay loop>
         <source src={src} />
       </video>

@@ -13,6 +13,7 @@ import TwitterIcon from 'react-icons/lib/fa/twitter'
 import InstagramIcon from 'react-icons/lib/fa/instagram'
 import SpotifyIcon from 'react-icons/lib/fa/spotify'
 import GeniusLogo from '../components/genius-logo'
+import VolumeButton from '../components/volume-button'
 
 export const pageQuery = graphql`
   query HomePageQuery {
@@ -80,6 +81,7 @@ export default class Home extends Component {
               className="home-page__live"
               poster={band}
             />
+            <VolumeButton video="home-page-live" />
 
             <h2>
               ...a live fusion of house music, funk/soul, and rock &amp; roll!
