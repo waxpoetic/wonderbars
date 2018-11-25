@@ -55,11 +55,11 @@
     position: absolute;
     padding: 1vh;
     background: white;
-    bottom: 0;
+    bottom: -31px;
 
-    @media only screen and (max-width: 600px) {
-      position: relative;
+    @media only screen and (max-width: 850px) {
       font-size: 1.2em;
+      bottom: -18px;
     }
   }
 }

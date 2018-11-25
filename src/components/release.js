@@ -46,16 +46,18 @@ class Track extends Component {
           </p>
         </section>
         <section className={this.lyricsClassName}>
-          <SocialButton key="spotify" color="green" title="Listen on Spotify">
-            <SpotifyIcon />
-          </SocialButton>
-          <SocialButton
-            key="genius"
-            color="yellow"
-            title="View Lyrics on Genius"
-          >
-            <GeniusLogo />
-          </SocialButton>
+          <nav class="social-buttons">
+            <SocialButton key="spotify" color="green" title="Listen on Spotify">
+              <SpotifyIcon />
+            </SocialButton>
+            <SocialButton
+              key="genius"
+              color="yellow"
+              title="View Lyrics on Genius"
+            >
+              <GeniusLogo />
+            </SocialButton>
+          </nav>
         </section>
       </li>
     )
@@ -82,7 +84,7 @@ class Links extends Component {
     const { spotify, genius } = this.props
 
     return (
-      <nav className="release__links">
+      <nav className="release__links social-buttons">
         <SocialButton color="green" title="Listen on Spotify" url={spotify}>
           <SpotifyIcon />
         </SocialButton>
