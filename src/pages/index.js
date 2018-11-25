@@ -34,7 +34,7 @@ export default class Home extends Component {
         </Title>
         <Content className="home-page__content">
           <section className="home-page__content-block home-page__subtitle">
-            <nav className="home-page__social-buttons">
+            <nav className="home-page__social-buttons social-buttons">
               <SocialButton
                 color="blue"
                 title="Like us on Facebook"

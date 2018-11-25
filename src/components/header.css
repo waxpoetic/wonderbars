@@ -28,11 +28,8 @@
     color: var(--red);
     text-decoration: none;
   }
-}
 
-@media only screen and (max-width: 768px) {
-
-  .header__logo-text {
+  @media only screen and (max-width: 840px) {
     font-size: 1.5em;
     margin: 20px auto;
     width: 36vw;

@@ -1,4 +1,9 @@
+.social-buttons {
+  display: flex;
+}
+
 .social-button {
+  flex: 1;
   border-radius: 4px;
   cursor: pointer;
   padding: 1vh;
@@ -13,8 +18,14 @@
 .social-button__title {
   margin-left: 5px;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 840px) {
     display: none;
+  }
+}
+
+.social-button__icon {
+  @media only screen and (max-width: 840px) {
+    font-size: 3em;
   }
 }
 

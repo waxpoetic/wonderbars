@@ -29,7 +29,7 @@ export default class SocialButton extends Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {icon}
+        <span className="social-button__icon">{icon}</span>
         <span className="social-button__title">{title}</span>
       </a>
     )
