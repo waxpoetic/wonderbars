@@ -38,9 +38,11 @@
     "start": "gatsby develop",
     "format": "prettier --write 'src/**/*.js' && stylelint src/**/*.css --fix",
     "lint": "stylelint src/**/*.css",
-    "deploy": "gatsby build && surge --project ./public --domain thewonderbars.com"
+    "deploy": "gatsby build && surge --project ./public --domain thewonderbars.com",
+    "generate": "plop"
   },
   "devDependencies": {
+    "plop": "^2.1.0",
     "prettier": "^1.14.2",
     "stylelint-config-standard": "^18.2.0"
   },
