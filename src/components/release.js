@@ -46,7 +46,7 @@ class Track extends Component {
           </p>
         </section>
         <section className={this.lyricsClassName}>
-          <nav class="social-buttons">
+          <nav className="social-buttons">
             <SocialButton key="spotify" color="green" title="Listen on Spotify">
               <SpotifyIcon />
             </SocialButton>
