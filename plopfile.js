@@ -30,9 +30,25 @@ module.exports = function(plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/data/events/{{date}}-{{name}}.yml',
+        path: 'src/data/events/{{dashCase date}}-{{name}}.yml',
         templateFile: 'etc/templates/event.yml.hbs'
       }
     ]
   })
+
+  plop.setGenerator('article', {
+    description: 'Generate a new article',
+    prompts: [
+      { type: 'input', name: 'name', message: 'Article Title' },
+      { type: 'input', name: 'category', message: 'Category' },
+      { type: 'input', name: 'date', message: 'Date', default: Date.today() },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: 'src/articles/{{dashCase date}}-{{dashCase name}}.md',
+        templateFile: 'etc/templates/article.md.hbs'
+      }
+    ]
+  }
 }

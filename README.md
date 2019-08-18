@@ -37,7 +37,7 @@ Use the generators to add new blog posts, events, and releases.
 To add blog posts:
 
 ```bash
-yarn generate article hello-new-york --date=2018-10-01 --category=tour
+yarn generate article 'Hello New York'
 ```
 
 This will generate a file in **src/articles** with the following
@@ -57,7 +57,7 @@ To add events:
 
 
 ```bash
-yarn generate event 'Event Name' --date=2019-08-08 --price=10.00 --facebook-id=1234567 --location=TBD
+yarn generate event 'Event Name'
 ```
 
 This will generate the following YAML in **src/data/events**:
@@ -74,7 +74,7 @@ description:
 Adding releases is similar:
 
 ```bash
-yarn generate release 'Release Name' --date=2010-10-10 --catalog-number=MB007
+yarn generate release 'Release Name'
 ```
 
 ...which generates this YAML in **src/data/releases**:
@@ -82,7 +82,6 @@ yarn generate release 'Release Name' --date=2010-10-10 --catalog-number=MB007
 ```yaml
 ---
 name: Release Name
-date: 2010-10-10
 catalog_number: MB007
 ```
 
