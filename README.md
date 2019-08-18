@@ -32,9 +32,16 @@ Visit <http://localhost:8000> to view the site.
 To add a new page, create a `.md` file in **src/pages**. This can also
 be a `.js` file, but it must wrap the `<Page>` component with a unique ID.
 
-To add blog posts, create a `.md` file in **src/articles**. This will
-include some YAML front matter for metadata, and Markdown content for
-the post. Here's an example:
+Use the generators to add new blog posts, events, and releases.
+
+To add blog posts:
+
+```bash
+yarn generate article hello-new-york --date=2018-10-01 --category=tour
+```
+
+This will generate a file in **src/articles** with the following
+contents:
 
 ```markdown
 ---
@@ -42,31 +49,39 @@ title: Hello New York
 date: 2018-10-01
 category: tour
 ---
-
-We're on tour in NYC and we love that $1 pizza.
 ```
 
-To add events, create a `.yml` file in **src/data/events**. Events must
-have a `date:` and a `facebook_id:` in order to retrieve proper URL data
-and be sorted, but all other information is optional. Here's an example
-of event data:
+This gives you a starting point to write a new blog post.
+
+To add events:
+
+
+```bash
+yarn generate event 'Event Name' --date=2019-08-08 --price=10.00 --facebook-id=1234567 --location=TBD
+```
+
+This will generate the following YAML in **src/data/events**:
 
 ```yaml
 ---
-name: The Big Time
-location: New York, NY
-description: ya finally made it sonny
-date: 2018-10-31
-facebook_id: 1234567890
+name: Event Name
+location: TBD
+date: 2019-08-08
+facebook_id: 1234567
+description:
 ```
 
-Adding releases is similar. Create a new `.yml` file in
-**src/data/releases** with a minimum of two fields: the release `name:`
-and the `catalog_number:`. Here's an example of release data:
+Adding releases is similar:
+
+```bash
+yarn generate release 'Release Name' --date=2010-10-10 --catalog-number=MB007
+```
+
+...which generates this YAML in **src/data/releases**:
 
 ```yaml
 ---
-name: The YT Album
+name: Release Name
 date: 2010-10-10
 catalog_number: MB007
 ```
