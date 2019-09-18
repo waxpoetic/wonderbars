@@ -6,7 +6,7 @@ import SocialButton from '../objects/social-button'
 
 import './index.css'
 import loop from '../assets/loop.mp4'
-import goblet from '../assets/goblet.mp4'
+import porchfest from '../assets/porchfest.mp4'
 import band from '../assets/us.jpg'
 import FacebookIcon from 'react-icons/lib/fa/facebook-official'
 import TwitterIcon from 'react-icons/lib/fa/twitter'
@@ -76,8 +76,8 @@ export default class Home extends Component {
           </section>
           <div className="home-page__band">
             <Video
-              src={goblet}
-              alt="The Wonder Bars Live @ Broken Goblet"
+              src={porchfest}
+              alt="The Wonder Bars Live @ West Philly PorchFest"
               className="home-page__live"
               poster={band}
             />
