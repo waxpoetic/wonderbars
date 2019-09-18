@@ -30,7 +30,7 @@ module.exports = function(plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/data/events/{{dashCase date}}-{{name}}.yml',
+        path: 'src/data/events/{{dashCase date}}-{{dashCase name}}.yml',
         templateFile: 'etc/templates/event.yml.hbs'
       }
     ]
@@ -41,7 +41,7 @@ module.exports = function(plop) {
     prompts: [
       { type: 'input', name: 'name', message: 'Article Title' },
       { type: 'input', name: 'category', message: 'Category' },
-      { type: 'input', name: 'date', message: 'Date', default: Date.today() },
+      { type: 'input', name: 'date', message: 'Date', default: new Date() }
     ],
     actions: [
       {
@@ -50,5 +50,5 @@ module.exports = function(plop) {
         templateFile: 'etc/templates/article.md.hbs'
       }
     ]
-  }
+  })
 }
